@@ -8,5 +8,30 @@ This is the official PyTorch implementation of the following paper:
 <!-- ![framework](framework.png,p_50) -->
 <div align="center"><img src="https://github.com/Daisyqk/Automatic-Prosody-Annotation/blob/master/framework.png" width="600px"></div>
 
-This implementation supports model and the code for inference.
+This implementation supports model and the code for inference. Note that the model we provide here is "Conformer-Char" model in the paper.
 
+
+## Getting Started
+
+### Dependencies
+The model is implemented with Python 3.6 and a couple of packages. In stall them use
+```bash
+pip install -r requirements.txt
+```
+
+### I. Data Preparation ### 
+The audio data needs to be preprocessed before fed into the model. Firstly，install kaldi tookit. Then extract audio features with kaldi using the following command.
+```bash
+echo "input raw_audio.wav" > tmp.scp
+compute-fbank-feats --num-mel-bins=80 scp:tmp.scp ark:fbk.ark
+compute-kaldi-pitch-feats scp:tmp.scp ark:- | process-kaldi-pitch-feats ark:- ark:pitch.ark
+paste-feats --length-tolerance=3 ark:fbk.ark ark:pitch.ark ark,scp:feature.ark,feature.scp
+```
+This command save the extracted features in feature.ark, which can be read through feature.scp.
+
+### II. Inference ### 
+Download the folder "inference", put the features files mentioned above in “inference/data”， then run the inference code by 
+```bash
+python code/main.py
+```
+The result will be stored in "prediction_save/test.txt". Note that the label 0-5 corresponds to CC, LW, PW, PPH, IPH in the paper respectively.
