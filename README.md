@@ -27,7 +27,7 @@ compute-fbank-feats --num-mel-bins=80 scp:tmp.scp ark:fbk.ark
 compute-kaldi-pitch-feats scp:tmp.scp ark:- | process-kaldi-pitch-feats ark:- ark:pitch.ark
 paste-feats --length-tolerance=3 ark:fbk.ark ark:pitch.ark ark,scp:feature.ark,feature.scp
 ```
-This command save the extracted features in feature.ark, which can be read through feature.scp.
+This command saves the extracted features in feature.ark, which can be read through feature.scp.
 
 ### II. Inference ### 
 Download the project, put the features files mentioned above in folder “data”， then run the inference code by 
