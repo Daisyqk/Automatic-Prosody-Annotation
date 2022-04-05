@@ -57,8 +57,8 @@ def predict_result(opt):
                     for m in range(0, len(masked_pred_label)):
                         f.write(id[m] + '\n')
                         f.write(source[m] + '\n')
-                        f.write(str(padded_labels[m][1:org_len[m]-1]) + '\n')
-                        f.write(str(masked_pred_label[m][1:org_len[m]-1]) + '\n')
+                        f.write('label: ' + str(padded_labels[m][1:org_len[m]-1]) + '\n')
+                        f.write('pred: ' + str(masked_pred_label[m][1:org_len[m]-1]) + '\n')
             if opt.save_attention_map:
                 for k in range(0, attention_map.size(0)):
                     attention_map_1 = attention_map[k]
