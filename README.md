@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 
 ### I. Data Preparation ### 
-The audio data needs to be preprocessed before fed into the model. Firstly, install kaldi tookit. Then extract audio features with kaldi using the following command.
+The audio data needs to be preprocessed before fed into the model. Firstly, install kaldi tookit. Then extract audio features with kaldi using the following command. 80 dimension FBank and 3 dimension pitch are concatenated as the input feature.
 ```bash
 echo "input raw_audio.wav" > tmp.scp
 compute-fbank-feats --num-mel-bins=80 scp:tmp.scp ark:fbk.ark
