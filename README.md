@@ -11,7 +11,7 @@ This is the official PyTorch implementation of the following paper:
 Visit our [demo page](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/) for audio samples.
 
 
-This implementation supports model and the code for inference. Note that the model we provide here is "Conformer-Char" model in the paper.
+This implementation supports out prosody estimation model and the code for inference. Note that the model we provide here is "Conformer-Char" model in the paper.
 
 
 ## Getting Started
