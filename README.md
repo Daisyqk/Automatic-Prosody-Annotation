@@ -30,7 +30,7 @@ paste-feats --length-tolerance=3 ark:fbk.ark ark:pitch.ark ark,scp:feature.ark,f
 This command save the extracted features in feature.ark, which can be read through feature.scp.
 
 ### II. Inference ### 
-Download the folder "inference", put the features files mentioned above in “inference/data”， then run the inference code by 
+Download the project, put the features files mentioned above in folder “data”， then run the inference code by 
 ```bash
 python code/main.py
 ```
