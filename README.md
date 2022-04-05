@@ -8,5 +8,5 @@ This is the official PyTorch implementation of the following paper:
 <!-- ![framework](framework.png,p_50) -->
 <div align="center"><img src="https://github.com/Daisyqk/Automatic-Prosody-Annotation/blob/master/framework.png" width="600px"></div>
 
-This implementation supports models and the code for inference.
+This implementation supports model and the code for inference.
 
