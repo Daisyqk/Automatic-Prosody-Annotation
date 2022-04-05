@@ -44,7 +44,7 @@ def main():
 
     opt.test_text_path = './../data/test.txt'
     opt.scp_path = './../data/feature.scp'
-    opt.model_path = './../model/model.pth'
+    opt.model_path = './../model.pth'
 
     predict_result(opt)
 
