@@ -16,7 +16,8 @@ This implementation supports our prosody estimation model (Conformer-Char as the
 ## Getting Started
 
 ### Dependencies
-The model is implemented with Python 3.6 and a couple of packages. In stall them use
+For data preparation in STEP I, you need to install [kaldi](https://github.com/kaldi-asr/kaldi) for feature extraction.
+For inference in STEP II, a couple of packages are required with Python 3.6. In stall them use
 ```bash
 pip install -r requirements.txt
 ```
